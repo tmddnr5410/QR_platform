@@ -27,7 +27,7 @@ function login(){
         
         console.log(res);
         if (res.success) {
-        location.href = "/";
+        location.href = "/main";
         }
         else {
             alert(res);
