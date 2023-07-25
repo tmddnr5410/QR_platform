@@ -1,20 +1,19 @@
 
 const HistoryStorage = require("../../models/HistoryStorage");
-const UserStorage = require("../../models/UserStorage");
-
+const CompanyStorage = require("../../models/CompanyStorage");
 
 
 class CompanyCtrl {
 
   static async show(req, res) {
+    var cpnID = req.params.cpnID;
     const logined = req.session.is_logined;
     if (logined) {
       const userId = req.session.userid;
-      const {name} = await UserStorage.getUsersName(userId);
-      console.log(name);
-      console.log({name});
+      const data = await CompanyStorage.getCompanyInfo(cpnID);
+      const {name:cpnName , intro:cpnIntro} = data[0];
       HistoryStorage.save(userId);
-      res.render("home/show",{name});
+      res.render("home/show",{cpnName:cpnName,cpnIntro:cpnIntro});
     } else {
       res.redirect("/login");
     }

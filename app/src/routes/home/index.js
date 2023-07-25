@@ -16,7 +16,7 @@ router.get("/register",HomeCtrl.register);
 router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
 
-router.get("/show",CompanyCtrl.show);
+router.get("/show/:cpnID",CompanyCtrl.show);
 //QR인식후 화면 라우팅
 
 
