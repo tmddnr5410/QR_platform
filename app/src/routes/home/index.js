@@ -5,7 +5,7 @@ const router = express.Router();
 
 const HomeCtrl = require('./HomeCtrl');
 const UserCtrl = require('./UserCtrl');
-const UserShowCtrl = require('./UserShowCtrl');
+const CompanyCtrl = require('./CompanyCtrl');
 
 router.get("/",HomeCtrl.home);
 //메인 화면 라우팅
@@ -16,7 +16,7 @@ router.get("/register",HomeCtrl.register);
 router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
 
-router.get("/show",UserShowCtrl.show);
+router.get("/show",CompanyCtrl.show);
 //QR인식후 화면 라우팅
 
 

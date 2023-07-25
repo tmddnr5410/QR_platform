@@ -4,13 +4,15 @@ const UserStorage = require("../../models/UserStorage");
 
 
 
-class UserShowCtrl {
+class CompanyCtrl {
 
   static async show(req, res) {
     const logined = req.session.is_logined;
     if (logined) {
       const userId = req.session.userid;
       const {name} = await UserStorage.getUsersName(userId);
+      console.log(name);
+      console.log({name});
       HistoryStorage.save(userId);
       res.render("home/show",{name});
     } else {
@@ -20,4 +22,4 @@ class UserShowCtrl {
 
 }
 
-module.exports = UserShowCtrl;
+module.exports = CompanyCtrl;
