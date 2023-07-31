@@ -34,11 +34,10 @@ class HomeCtrl {
     res.render("home/mypage");
   }
 
-  // static logout(req,res){
-  //   req.session.destroy();
-  //   res.clearCookie('sid');
-  //   res.redirect("/main");
-  // }
+  static logout(req, res){
+    req.session.destroy();
+    res.redirect("home/main");
+  }
 
 }
 

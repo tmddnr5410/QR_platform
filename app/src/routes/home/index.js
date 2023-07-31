@@ -19,14 +19,14 @@ router.get("/register",HomeCtrl.register);
 router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
 
+router.get("/show/:cpnID",CompanyCtrl.show);
+//QR인식후 화면 라우팅
+
 router.get("/mypage",HomeCtrl.mypage);
 //마이페이지 화면 라우팅
 
-// router.get("/logout", HomeCtrl.logout);
+router.get("/logout", HomeCtrl.logout);
 // 로그아웃 -> 세션 삭제
-
-router.get("/show/:cpnID",CompanyCtrl.show);
-//QR인식후 화면 라우팅
 
 //login경로로 포스토 요청이 오면 실행
 router.post("/login",UserCtrl.processLogin);
