@@ -14,8 +14,16 @@ router.get("/login",HomeCtrl.login);
 router.get("/register",HomeCtrl.register);
 //회원가입 화면 라우팅
 router.get("/main",HomeCtrl.main);
-
 //메인 화면 라우팅
+
+
+// router.get("/logout", function(req,res,next){
+//     req.session.destroy();
+//     res.clearCookie('sid');
+  
+//     res.redirect("/main")
+//   })
+// 로그아웃 -> 세션 삭제
 
 router.get("/show/:cpnID",CompanyCtrl.show);
 //QR인식후 화면 라우팅
