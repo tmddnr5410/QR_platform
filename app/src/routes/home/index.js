@@ -17,12 +17,7 @@ router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
 
 
-// router.get("/logout", function(req,res,next){
-//     req.session.destroy();
-//     res.clearCookie('sid');
-  
-//     res.redirect("/main")
-//   })
+router.get("/logout", HomeCtrl.logout);
 // 로그아웃 -> 세션 삭제
 
 router.get("/show/:cpnID",CompanyCtrl.show);

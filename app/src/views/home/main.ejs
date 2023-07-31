@@ -14,8 +14,10 @@
       </ul>
 
       <ul class="right-menu">
-       <!-- <% if(session.userid){ %>
+       <% if(islogined){ %>
           <li>
+            
+            <li><%= username %>님 환영합니다</li>
             <a href="/logout">
               <li>로그아웃</li>
             </a>
@@ -30,15 +32,8 @@
               </a>
             </li>
           <% } %>
-          -->
-        <li>
-          <a href="/login">
-            <li>로그인</li>
-          </a>
-          <a href="/register">
-            <li>회원가입</li>
-          </a>
-        </li>
+         
+      
       </ul>
     </nav>
 

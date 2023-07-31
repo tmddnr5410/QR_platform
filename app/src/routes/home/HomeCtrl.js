@@ -1,12 +1,26 @@
+const UserStorage = require("../../models/UserStorage");
+
+
 class HomeCtrl {
   static home(req, res) {
     //console.log(req.session);
     res.render("home/index");
   }
 
-  static main(req, res) {
-    //console.log(req.session);
-    res.render("home/main");
+  static async main(req, res) {
+    
+    // console.log(userid);
+    const userid = req.session.userid;
+    
+    if(userid){
+      
+    const {name:username} = await UserStorage.getUsersName(userid);
+    console.log(username);
+    res.render("home/main",{userid , islogined:true, username});
+    }
+    else{
+      res.render("home/main",{islogined:false});
+    }
   }
 
   static login(req, res) {
@@ -18,6 +32,11 @@ class HomeCtrl {
     res.render("home/register");
   }
 
+  static logout(req,res){
+    req.session.destroy();
+    res.clearCookie('sid');
+    res.redirect("/main");
+  }
 
 }
 
