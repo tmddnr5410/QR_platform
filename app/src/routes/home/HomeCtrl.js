@@ -36,7 +36,7 @@ class HomeCtrl {
 
   static logout(req, res){
     req.session.destroy();
-    res.redirect("home/main");
+    res.redirect("/main");
   }
 
 }
