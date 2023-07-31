@@ -9,21 +9,20 @@ const CompanyCtrl = require('./CompanyCtrl');
 
 router.get("/",HomeCtrl.home);
 //메인 화면 라우팅
+
 router.get("/login",HomeCtrl.login);
 //로그인 화면 라우팅
+
 router.get("/register",HomeCtrl.register);
 //회원가입 화면 라우팅
+
 router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
+
 router.get("/mypage",HomeCtrl.mypage);
 //마이페이지 화면 라우팅
 
-// router.get("/logout", function(req,res,next){
-//     req.session.destroy();
-//     res.clearCookie('sid');
-  
-//     res.redirect("/main")
-//   })
+// router.get("/logout", HomeCtrl.logout);
 // 로그아웃 -> 세션 삭제
 
 router.get("/show/:cpnID",CompanyCtrl.show);
