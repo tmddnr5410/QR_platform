@@ -15,7 +15,8 @@ router.get("/register",HomeCtrl.register);
 //회원가입 화면 라우팅
 router.get("/main",HomeCtrl.main);
 //메인 화면 라우팅
-
+router.get("/mypage",HomeCtrl.mypage);
+//마이페이지 화면 라우팅
 
 // router.get("/logout", function(req,res,next){
 //     req.session.destroy();
@@ -28,16 +29,10 @@ router.get("/main",HomeCtrl.main);
 router.get("/show/:cpnID",CompanyCtrl.show);
 //QR인식후 화면 라우팅
 
-
-
-
 //login경로로 포스토 요청이 오면 실행
 router.post("/login",UserCtrl.processLogin);
 
 //register경로로 포스트요청이 오면 실행
 router.post("/register",UserCtrl.processRegister);
-
-
-
 
 module.exports = router;

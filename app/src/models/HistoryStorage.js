@@ -17,7 +17,5 @@ class HistoryStorage{
         
     }
 
-
-
 }
 module.exports = HistoryStorage;
