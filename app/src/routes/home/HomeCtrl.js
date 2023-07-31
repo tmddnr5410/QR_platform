@@ -1,6 +1,3 @@
-
-
-
 class HomeCtrl {
   static home(req, res) {
     //console.log(req.session);

@@ -2,7 +2,6 @@
 
 //console.log("log From register.js !!");
 
-
 const uid = document.querySelector("#id"),
       name = document.querySelector("#name"),
       psword = document.querySelector("#psword"),

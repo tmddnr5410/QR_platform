@@ -14,6 +14,7 @@ router.get("/login",HomeCtrl.login);
 router.get("/register",HomeCtrl.register);
 //회원가입 화면 라우팅
 router.get("/main",HomeCtrl.main);
+
 //메인 화면 라우팅
 
 router.get("/show/:cpnID",CompanyCtrl.show);
