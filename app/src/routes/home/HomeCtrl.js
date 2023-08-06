@@ -13,10 +13,12 @@ class HomeCtrl {
     const userid = req.session.userid;
     
     if(userid){
-      
+
     const {name:username} = await UserStorage.getUsersName(userid);
     console.log(username);
+
     res.render("home/main",{userid , islogined:true, username});
+    
     }
     else{
       res.render("home/main",{islogined:false});
