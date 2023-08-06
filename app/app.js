@@ -9,10 +9,6 @@ const session = require("express-session");
 const cookieParser = require('cookie-parser');
 
 dotenv.config();
-
-// 
-
-
 //라우팅
 
 const home = require("./src/routes/home");

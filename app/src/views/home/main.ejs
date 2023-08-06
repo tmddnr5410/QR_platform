@@ -1,17 +1,245 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<h2>this is main page</h2>
-<p class="message">You want login? <a href="/login">login account</a></p>
-<p class="message">You want registered? <a href="/register">Create an account</a></p>
-<p class="message">show info page? <a href="/show/ys">Show Info</a></p>
+  <link rel="stylesheet" href="/css/home/main.css">
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
 
-</body>
-</html>
+  <div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <li><a href="/main">LOGO EXAMPLE</a></li>
+      <ul class="main-menu">
+        <li><a href="#">고객</a></li>
+        <li><a href="/show/ys">기업</a></li>
+        <li><a href="#">관리자</a></li>
+      </ul>
 
-<!--Copyright (c) 2023 by Aigars Silkalns (https://codepen.io/colorlib/pen/rxddKy)-->
+      <ul class="right-menu">
+       <% if(islogined){ %>
+          <li>
+            
+            <li><%= username %>님 환영합니다</li>
+            <a href="/logout">
+              <li>로그아웃</li>
+            </a>
+            <a href="/mypage">
+              <li>마이페이지</li>
+            </a>
+          </li>
+          <% } else{ %>
+            <li>
+              <a href="/login">
+                <li>로그인</li>
+              </a>
+              <a href="/register">
+                <li>회원가입</li>
+              </a>
+            </li>
+          <% } %>
+      </ul>
+    </nav>
+
+    <!-- Showcase -->
+    <header class="showcase">
+      <h2>QR 기업 정보</h2>
+  
+      <a href="/show" class="btn">
+        보러 가기 <i class="fas fa-chevron-right"></i>
+      </a>
+    </header>
+  </div>
+
+  <!--기업 정보 카드 칸-->  
+  <div class = "whole-cards">
+    <section class="title">
+      <h3 text-align: center;>기업 정보</h3>
+    </section>
+
+    <!-- Home cards 1 -->
+    <section class="home-cards">
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
+        <section >
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Home cards 2 -->
+    <section class="home-cards">
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
+        <section >
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+
+    <!-- Home cards 3 -->
+    <section class="home-cards">
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
+        <section >
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="home-cards-box">
+        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
+        <h3>회사명</h3>
+        <p>
+          회사 정보
+        </p>
+        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </section>
+    </div>
+
+    <!-- Follow -->
+    <div class="container">
+    <section class="follow">
+      <p>Follow</p>
+      <a href="https://facebook.com">
+        <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
+      </a>
+      <a href="https://twitter.com">
+        <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
+      </a>
+      <!-- <a href="https://youtube.com">
+        <img src="../../public/css/img/youtube-icon.png" alt="Youtube">
+      </a> -->
+    </section>
+    <!-- Xbox -->
+    <section class="xbox">
+      <div class="content">
+        <div class="cus-center">
+          <h2>고객센터</h2>
+
+          <p>채용 정보 문의</p>
+            
+          <p>기업 등록 문의</p>
+
+          <p>결제 문의</p>
+        </div>
+      </div>
+      <div class="content">
+        
+        <div class = "question">
+          <h2>Q&A</h2>
+        </div>
+      </div>
+    </section>
+  </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <ul>
+            <li><a href="#">이용 약관</a></li>
+					<li><a href="#">개인정보처리방침</a></li>
+          </ul>
+        </div>
+        <div class="footer-inner">
+          <ul>
+					<li><a href="#">고객센터 00-0000-0000</a></li>
+          <li><a href="#">주소 00-0000-0000</a></li>
+          <li><a href="#">팩스 00-0000-0000</a></li>
+
+					<li><a href="#">&copy; AisLAB</a></li>
+          </ul>
+        </div>
+      </footer>

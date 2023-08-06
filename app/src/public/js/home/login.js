@@ -24,10 +24,9 @@ function login(){
         body : JSON.stringify(req),
     }).then((res) => res.json())
       .then((res) => {
-        
         console.log(res);
         if (res.success) {
-        location.href = "/";
+        location.href = "/main";
         }
         else {
             alert(res);
@@ -36,5 +35,4 @@ function login(){
       .catch((err) => {
         console.err(new Error("로그인중 에러 발생"));
       });
-
 }
