@@ -37,8 +37,6 @@ class UserStorage{
         });
         
     }
-
-
-
+    
 }
 module.exports = UserStorage;

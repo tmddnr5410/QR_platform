@@ -8,7 +8,6 @@ class HomeCtrl {
   }
 
   static async main(req, res) {
-    
     // console.log(userid);
     const userid = req.session.userid;
     
@@ -29,14 +28,16 @@ class HomeCtrl {
     res.render("home/login");
   }
 
-
   static register(req, res) {
     res.render("home/register");
   }
 
-  static logout(req,res){
+  static mypage(req, res) {
+    res.render("home/mypage");
+  }
+
+  static logout(req, res){
     req.session.destroy();
-    res.clearCookie('sid');
     res.redirect("/main");
   }
 

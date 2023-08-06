@@ -24,8 +24,6 @@ class UserCtrl {
     return res.json(response);
   }
 
-  
-
 }
 
 module.exports = UserCtrl;
