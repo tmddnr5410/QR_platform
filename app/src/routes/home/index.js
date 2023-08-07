@@ -6,6 +6,8 @@ const router = express.Router();
 const HomeCtrl = require('./HomeCtrl');
 const UserCtrl = require('./UserCtrl');
 const CompanyCtrl = require('./CompanyCtrl');
+const QRCtrl = require('./QRCtrl');
+
 
 router.get("/",HomeCtrl.home);
 //메인 화면 라우팅
@@ -27,6 +29,10 @@ router.get("/mypage",HomeCtrl.mypage);
 
 router.get("/logout", HomeCtrl.logout);
 // 로그아웃 -> 세션 삭제
+
+router.get("/qr",QRCtrl.showQRmaker);
+
+router.post("/madeqr",QRCtrl.madeQR);
 
 //login경로로 포스토 요청이 오면 실행
 router.post("/login",UserCtrl.processLogin);
