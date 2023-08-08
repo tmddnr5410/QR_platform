@@ -36,6 +36,18 @@ class HomeCtrl {
     res.render("home/mypage");
   }
 
+  static Admin(req, res) {
+    res.render("home/Admin");
+  }
+
+  static Audience(req, res) {
+    res.render("home/Audience");
+  }
+
+  static Company(req, res) {
+    res.render("home/Company");
+  }
+
   static logout(req, res){
     req.session.destroy();
     res.redirect("/main");
