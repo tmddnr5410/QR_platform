@@ -193,6 +193,16 @@ ul {
   padding-right: 30px;
 }
 
+.xbox .btn{
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 5px 10px;
+  background: #262626;
+  color: #fff;
+  font-size: 13px;;
+}
 .xbox p, .carbon p {
   margin: 10px 0 20px;
 }

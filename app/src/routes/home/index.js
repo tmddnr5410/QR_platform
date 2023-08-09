@@ -36,6 +36,9 @@ router.get("/Audience",HomeCtrl.Audience);
 router.get("/Company",HomeCtrl.Company);
 //사용자 페이지화면 라우팅
 
+router.get("/Admin_log",HomeCtrl.Admin_log);
+//사용자 페이지화면 라우팅
+
 
 router.get("/logout", HomeCtrl.logout);
 // 로그아웃 -> 세션 삭제

@@ -66,6 +66,10 @@ class HomeCtrl {
     res.render("home/Company");
   }
 
+  static Admin_log(req, res) {
+    res.render("home/Admin_log");
+  }
+
   static logout(req, res){
     req.session.destroy();
     res.redirect("/main");
