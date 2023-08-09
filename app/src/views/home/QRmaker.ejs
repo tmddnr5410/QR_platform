@@ -1,13 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	<meta charset="utf-8"/>
-	</head>
-	<body>
-		<form method="post", action="/madeqr">
-			<input type="text" id="text" name="text">
-			<input type="submit" value="qr코드 생성" id="btn">
-		</form>
-		<!-- <script src="index.js"></script> -->
-	</body>
-</html>
+<link rel="stylesheet" href="/css/home/show.css" />
+<div class="menu-btn">
+  <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+  <!-- Nav -->
+  <nav class="main-nav">
+    <li><a href="/main">QRXpo</a></li>
+    <ul class="main-menu">
+        <li><a href="/Audience">고객</a></li>
+        <li><a href="/Company">기업</a></li>
+        <li><a href="/Admin">관리자</a></li>
+    </ul>
+  </nav>
+
+<div class="side-nav">
+  <ul>
+    <li><a class="home" href="#">관리자</a></li>
+    <li><a href="#">기업 정보 등록</a></li>
+    <li><a href="#">참여 기업 보기</a></li>
+    <li><a href="#">관람객 로그</a></li>
+    <li><a href="/qr">QR코드 생성</a></li>
+  </ul>
+</div>
+  <!-- Xbox -->
+  <section class="xbox">
+    <div class="content">
+      <h2>QR코드 생성</h2>
+	  <form method="post", action="/madeqr">
+		<input type="text" id="text" name="text">
+		<input type="submit" value="qr코드 생성" id="btn">
+	</form>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <ul>
+      <li><a href="#">이용 약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+    </ul>
+  </div>
+  <div class="footer-inner">
+    <ul>
+      <li><a href="#">고객센터 00-0000-0000</a></li>
+      <li><a href="#">주소 00-0000-0000</a></li>
+      <li><a href="#">팩스 00-0000-0000</a></li>
+
+      <li><a href="#">&copy; AisLAB</a></li>
+    </ul>
+  </div>
+</footer>
