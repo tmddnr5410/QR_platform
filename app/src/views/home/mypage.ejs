@@ -26,6 +26,17 @@
   <section class="xbox">
     <div class="content">
       <h2>내 정보</h2>
+      <% if(islogined){ %>
+          
+          <h3>이름 : <%= username %></h3>
+          <h3>아이디 : <%= userid %></h3>
+          <h3>비밀번호 : <%= psword %></h3>
+          <h3>소속 : <%= affil %></h3>
+          <h3>나이 : <%= age %></h3>
+          
+        <% } else{ %>
+              <h3>login 필요</h3>
+        <% } %>
     </div>
   </section>
 </div>
