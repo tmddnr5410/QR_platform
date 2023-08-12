@@ -17,7 +17,7 @@ class User{
                     return {success: true};
                 }
                 else{
-                return {success: false, msg: "회원 정보가 일치하지 않습니다."}
+                return {success: false, msg: "회원 정보가 일치하지 않습니다."};
                 }
          
         } catch(err){
