@@ -7,7 +7,7 @@ const HomeCtrl = require('./HomeCtrl');
 const UserCtrl = require('./UserCtrl');
 const CompanyCtrl = require('./CompanyCtrl');
 const QRCtrl = require('./QRCtrl');
-
+const AdminCtrl=require("./AdminCtrl");
 
 router.get("/",HomeCtrl.home);
 //메인 화면 라우팅
@@ -36,7 +36,7 @@ router.get("/Audience",HomeCtrl.Audience);
 router.get("/Company",HomeCtrl.Company);
 //사용자 페이지화면 라우팅
 
-router.get("/Admin_log",HomeCtrl.Admin_log);
+router.get("/Admin_log",AdminCtrl.showHistory);
 //사용자 페이지화면 라우팅
 
 
