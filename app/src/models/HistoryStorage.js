@@ -10,7 +10,7 @@ class HistoryStorage{
         return new Promise((resolve,reject)=>{
             const query = "SELECT * from visithistory;";
             
-            db.query(query,[],(err)=>{
+            db.query(query,[],(err,data)=>{
                 if(err) throw reject(`${err}`);
                 resolve(data);
             });
