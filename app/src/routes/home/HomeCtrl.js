@@ -28,8 +28,16 @@ class HomeCtrl {
     res.render("home/login");
   }
 
+  static company_login(req, res) {
+    res.render("home/company_login");
+  }
+
   static register(req, res) {
     res.render("home/register");
+  }
+
+  static company_register(req, res) {
+    res.render("home/company_register");
   }
 
   // static mypage(req, res) {

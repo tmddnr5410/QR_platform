@@ -15,7 +15,13 @@ router.get("/",HomeCtrl.home);
 router.get("/login",HomeCtrl.login);
 //로그인 화면 라우팅
 
+router.get("/company_login",HomeCtrl.login);
+//로그인 화면 라우팅
+
 router.get("/register",HomeCtrl.register);
+//회원가입 화면 라우팅
+
+router.get("/company_register",HomeCtrl.register);
 //회원가입 화면 라우팅
 
 router.get("/main",HomeCtrl.main);
