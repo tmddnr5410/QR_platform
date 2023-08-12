@@ -28,11 +28,11 @@
       <h2>내 정보</h2>
       <% if(islogined){ %>
         <div>
-          <h3>이름 : <%= username %></h3>
-          <h3>아이디 : <%= userid %></h3>
-          <h3>비밀번호 : <%= psword %></h3>
-          <h3>소속 : <%= affil %></h3>
-          <h3>나이 : <%= age %></h3>
+          <input id = "id" type="text" placeholder=<%= username %> />
+          <input id = "name" type="text" placeholder=<%= userid %> />
+          <input id = "psword" type="password" placeholder=<%= psword %> /> 
+          <input id = "affil" type="text" placeholder=<%= affil %> /> 
+          <input id = "age" type="text" placeholder=<%= age %> /> 
           <a class="btn">수정</a>
         </div>
           
