@@ -146,12 +146,44 @@ ul {
   margin-left: 10px;
 }
 
+/*side-nav*/
+.side-nav ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background: rgb(236, 234, 234);
+  height: 50%;
+  float:left;
+  /* overflow: auto; */
+  /* position: fixed; */
+}
+
+.side-nav li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #000;
+  font-weight: bold;
+}
+
+.side-nav li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.side-nav li a.home {
+  background : #333;
+  color: #fff;
+}
+
 /* Xbox */
 .xbox {
-  width: 100%;
+  width: 80%;
   height: 800px;
   background-color: gainsboro;
   margin-bottom: 20px;
+  float:left;
 }
 
 .xbox .content {
@@ -161,6 +193,16 @@ ul {
   padding-right: 30px;
 }
 
+.xbox .btn{
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  font-weight: bold;
+  padding: 5px 10px;
+  background: #262626;
+  color: #fff;
+  font-size: 13px;;
+}
 .xbox p, .carbon p {
   margin: 10px 0 20px;
 }
@@ -209,6 +251,7 @@ ul {
 
 /* Footer */
 .footer {
+  clear:both;
   background: #f2f2f2;
   color: #616161;
   font-size: 12px;

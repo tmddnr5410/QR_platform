@@ -14,7 +14,7 @@ class HomeCtrl {
     if(userid){
 
     const {name:username} = await UserStorage.getUsersName(userid);
-    console.log(username);
+    // console.log(username);
 
     res.render("home/main",{userid , islogined:true, username});
     
@@ -32,8 +32,42 @@ class HomeCtrl {
     res.render("home/register");
   }
 
-  static mypage(req, res) {
-    res.render("home/mypage");
+  // static mypage(req, res) {
+  //   res.render("home/mypage");
+  // }
+
+  //mypage 정보 출력
+  static async mypage(req, res) {
+    const userid = req.session.userid;
+    
+    if(userid){
+
+    const {name:username, psword:psword, affil:affil, age:age} = await UserStorage.getUsersInfo(userid);
+    console.log(username);
+    console.log(username);
+    
+    res.render("home/mypage",{islogined:true, userid , username, psword, affil, age});
+    
+    }
+    else{
+      res.render("home/mypage",{islogined:false});
+    }
+  }
+
+  static Admin(req, res) {
+    res.render("home/Admin");
+  }
+
+  static Audience(req, res) {
+    res.render("home/Audience");
+  }
+
+  static Company(req, res) {
+    res.render("home/Company");
+  }
+
+  static Admin_log(req, res) {
+    res.render("home/Admin_log");
   }
 
   static logout(req, res){

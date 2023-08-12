@@ -6,26 +6,39 @@
 <div class="container">
   <!-- Nav -->
   <nav class="main-nav">
-    <li><a href="/">LOGO EXAMPLE</a></li>
+    <li><a href="/main">QRXpo</a></li>
     <ul class="main-menu">
-      <li><a href="#">고객</a></li>
-      <li><a href="#">기업</a></li>
-      <li><a href="#">관리자</a></li>
+      <li><a href="/Audience">고객</a></li>
+        <li><a href="/Company">기업</a></li>
+        <li><a href="/Admin">관리자</a></li>
     </ul>
-
   </nav>
+
+  <div class="side-nav">
+    <ul>
+      <li><a class="home" href="/Audience">고객</a></li>
+      <li><a href="/mypage">내 정보</a></li>
+  
+    </ul>
+  </div>
 
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-    
-      <h2>아이디 : <%= userid %> 의 소개.</h2>
-      <h2>이름: <%= username %></h2>
-      <h2>비밀번호: <%= userpsword %></h2>
-      <h2>소속: <%= useraffil %></h2>
-      <h2>나이: <%= userage %></h2>
-    
       <h2>내 정보</h2>
+      <% if(islogined){ %>
+        <div>
+          <h3>이름 : <%= username %></h3>
+          <h3>아이디 : <%= userid %></h3>
+          <h3>비밀번호 : <%= psword %></h3>
+          <h3>소속 : <%= affil %></h3>
+          <h3>나이 : <%= age %></h3>
+          <a class="btn">수정</a>
+        </div>
+          
+        <% } else{ %>
+              <h3>login 필요</h3>
+        <% } %>
     </div>
   </section>
 </div>
