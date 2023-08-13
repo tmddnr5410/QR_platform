@@ -21,7 +21,7 @@ function register(){
         //confirmPsword: confirmPsword.value,
     };
     //console.log(req);
-    fetch("/register", {
+    fetch("/userregister", {
         method : "POST",
         headers:{
             "Content-Type":"application/json",

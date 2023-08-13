@@ -14,7 +14,7 @@ function login(){
         psword: psword.value,
     };
 
-    fetch("/login", {
+    fetch("/userlogin", {
       //post방식으로 보낼것이다
         method : "POST",
         headers:{

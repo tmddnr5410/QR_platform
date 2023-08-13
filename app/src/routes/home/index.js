@@ -47,12 +47,31 @@ router.get("/qr",QRCtrl.showQRmaker);
 
 router.post("/madeqr",QRCtrl.madeQR);
 
+
+
+
+//회원측 API
+
 //login경로로 포스토 요청이 오면 실행
-router.post("/login",UserCtrl.processLogin);
+router.post("/userlogin",UserCtrl.processLogin);
 
 //register경로로 포스트요청이 오면 실행
-router.post("/register",UserCtrl.processRegister);
+router.post("/userregister",UserCtrl.processRegister);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/useredit",UserCtrl.processEdit);
 
 
+
+//기업측 API
+
+//login경로로 포스토 요청이 오면 실행
+router.post("/cpnlogin",CompanyCtrl.processLogin);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/cpnregister",CompanyCtrl.processRegister);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/cpnedit",CompanyCtrl.processEdit);
 
 module.exports = router;

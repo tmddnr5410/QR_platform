@@ -29,7 +29,8 @@ class UserStorage{
 
     static async save(userInfo){
         return new Promise((resolve,reject) => {
-            const query = 'INSERT INTO users(uid,name,psword,affil,age) VALUES(?,?,?,"d",1);';
+            const query = `INSERT INTO users(uid,name,psword,affil,age) 
+            VALUES(?,?,?,?,?);`;
             db.query(query,[userInfo.uid,userInfo.name,userInfo.psword],(err)=>{
                 if(err) throw reject(`${err}`);
                 resolve({success:true});
@@ -38,5 +39,18 @@ class UserStorage{
         
     }
     
+    static async edit(userInfo){
+        return new Promise((resolve,reject)=>{
+            const query = `UPDATE users
+            SET uid = ?,name = ?,age=?,affil=?,psword=?
+            where id = ?;
+            `;
+            db.query(query,[userInfo.uid,userInfo.name,userInfo.age,userInfo.affil,userInfo.psword],(err)=>{
+                if(err) throw reject(`${err.message}`);
+                resolve({success:true});
+            })
+
+        })
+    }
 }
 module.exports = UserStorage;
