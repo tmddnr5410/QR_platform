@@ -26,19 +26,26 @@
   <section class="xbox">
     <div class="content">
       <h2>내 정보</h2>
+      <div>
       <% if(islogined){ %>
-        <div>
+        <div class="changeinfo">
           <input id = "id" type="text" placeholder=<%= username %> />
+          <br>
           <input id = "name" type="text" placeholder=<%= userid %> />
+          <br>
           <input id = "psword" type="password" placeholder=<%= psword %> /> 
+          <br>
           <input id = "affil" type="text" placeholder=<%= affil %> /> 
+          <br>
           <input id = "age" type="text" placeholder=<%= age %> /> 
+          <br>
           <a class="btn">수정</a>
         </div>
           
         <% } else{ %>
               <h3>login 필요</h3>
         <% } %>
+      </div>
     </div>
   </section>
 </div>

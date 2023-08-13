@@ -27,12 +27,20 @@
   <section class="xbox">
     <div class="content">
       <h2>로그 확인</h2>
+      <div class="log_table">
+      <table>
+      <tr>
+        <th>접속자</th>
+        <th>회사</th>
+        <th>접속 시간</th>  
+      </tr>
       <% for (var i = 0; i < arr_history.length; i++) { %>
-      <h2><%= arr_history[i].uid %> | <%=arr_history[i].cpnid %> | <%=arr_history[i].in_date %></h2>
+      <tr>
+      <td><%= arr_history[i].uid %></td>  <td><%=arr_history[i].cpnid %></td>  <td><%=arr_history[i].in_date%></td>
       <% } %>
-      <h2>로그 확인</h2>
-	  
-	</form>
+      </tr>
+      </table>
+    </div>
     </div>
   </section>
 </div>
