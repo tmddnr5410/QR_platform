@@ -11,7 +11,7 @@ class Company{
     async login(){
         const client = this.body;
         try{
-            const {cpnid,psword,in_date} = await CompanyStorage.getCompanyInfo(client.cpnid);
+            const {cpnid,psword} = await CompanyStorage.getCompanyInfo(client.cpnid);
                 if(cpnid == client.cpnid && psword === client.psword){
                     return {success:true};
                 }
@@ -36,6 +36,19 @@ class Company{
 
     }
     
+    async edit(){
+        const client = this.body;
+
+        try{
+            const response = await CompanyStorage.edit(client);
+            return response;
+        } catch(err){
+            const er = {success:false, msg:err};
+            
+            return er;
+        }
+    }
+
 }
 
 module.exports = Company;

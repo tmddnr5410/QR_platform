@@ -24,6 +24,14 @@ class UserCtrl {
     return res.json(response);
   }
 
+
+  static async processEdit(req,res){
+    const user = new User(req.body);
+    const response = await user.edit();
+
+    return res.json(response);
+  }
+
 }
 
 module.exports = UserCtrl;

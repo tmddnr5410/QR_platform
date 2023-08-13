@@ -15,13 +15,7 @@ router.get("/",HomeCtrl.home);
 router.get("/login",HomeCtrl.login);
 //로그인 화면 라우팅
 
-router.get("/company_login",HomeCtrl.company_login);
-//로그인 화면 라우팅
-
 router.get("/register",HomeCtrl.register);
-//회원가입 화면 라우팅
-
-router.get("/company_register",HomeCtrl.company_register);
 //회원가입 화면 라우팅
 
 router.get("/main",HomeCtrl.main);
@@ -53,12 +47,31 @@ router.get("/qr",QRCtrl.showQRmaker);
 
 router.post("/madeqr",QRCtrl.madeQR);
 
+
+
+
+//회원측 API
+
 //login경로로 포스토 요청이 오면 실행
-router.post("/login",UserCtrl.processLogin);
+router.post("/userlogin",UserCtrl.processLogin);
 
 //register경로로 포스트요청이 오면 실행
-router.post("/register",UserCtrl.processRegister);
+router.post("/userregister",UserCtrl.processRegister);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/useredit",UserCtrl.processEdit);
 
 
+
+//기업측 API
+
+//login경로로 포스토 요청이 오면 실행
+router.post("/cpnlogin",CompanyCtrl.processLogin);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/cpnregister",CompanyCtrl.processRegister);
+
+//register경로로 포스트요청이 오면 실행
+router.post("/cpnedit",CompanyCtrl.processEdit);
 
 module.exports = router;

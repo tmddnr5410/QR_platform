@@ -1,7 +1,7 @@
 
 const HistoryStorage = require("../../models/HistoryStorage");
 const CompanyStorage = require("../../models/CompanyStorage");
-
+const Company = require("../../models/Company");
 
 class CompanyCtrl {
 
@@ -23,6 +23,38 @@ class CompanyCtrl {
       res.redirect("/login");
     }
   }
+
+
+  static async processLogin(req, res) {
+    console.log(req.body);
+    const company = new Company(req.body);
+    const response = await company.login();
+    
+
+    //로그인 성공시 세션 생성
+    if (response.success) {
+      req.session.is_logined = true;
+      req.session.Companyid = req.body.uid;
+    }
+
+    return res.json(response);
+  }
+
+  static async processRegister(req, res) {
+    const company = new Company(req.body);
+    const response = await company.register();
+    console.log(response);
+    return res.json(response);
+  }
+
+
+  static async processEdit(req,res){
+    const company = new Company(req.body);
+    const response = await company.edit();
+
+    return res.json(response);
+  }
+
 
 }
 

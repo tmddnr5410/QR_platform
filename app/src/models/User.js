@@ -39,6 +39,17 @@ class User{
 
     }
 
+    async edit(){
+        const client = this.body;
+
+        try {
+            const response = await UserStorage.edit(client);
+            return response;
+        } catch(err){
+            const e = {success:false,msg:err};
+            return e;
+        }
+    }
 
 }
 

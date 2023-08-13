@@ -54,6 +54,10 @@ CREATE TABLE visithistory(
 INSERT INTO visithistory(uid,cpnid)
     values("lls","ys");
 
+-- 정보 수정 쿼리
+UPDATE users
+SET uid = ""
+where id = 5;
 
 
 #mysql -u root -p -h localhost
