@@ -8,9 +8,9 @@
   <nav class="main-nav">
     <li><a href="/main">QRXpo</a></li>
     <ul class="main-menu">
-        <li><a href= "/Audience">고객</a></li>
-        <li><a href= "/Company">기업</a></li>
-        <li><a href= "/Admin">관리자</a></li>
+        <li><a href="/Audience">고객</a></li>
+        <li><a href="/Company">기업</a></li>
+        <li><a href="/Admin">관리자</a></li>
     </ul>
   </nav>
 
@@ -18,7 +18,7 @@
   <ul>
     <li><a class="home" href="/Admin">관리자</a></li>
     <li><a href="#">기업 정보 등록</a></li>
-    <li><a href="/Admin_parti">참여 기업 보기</a></li>
+    <li><a href="#">참여 기업 보기</a></li>
     <li><a href="/Admin_log">관람객 로그</a></li>
     <li><a href="/qr">QR코드 생성</a></li>
   </ul>
@@ -26,7 +26,16 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>관리자 페이지</h2>
+      <h2>참여 기업 확인</h2>
+        <div>
+        </tr>
+            <% for (var i = 0; i < cpnID.length; i++) { %>
+        <tr>
+        <td>참여 기업 : <%= cpnID[i].cpnid %></td>
+        <br>
+            <% } %>
+        </div>
+    
     </div>
   </section>
 </div>

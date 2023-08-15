@@ -47,15 +47,9 @@ class HomeCtrl {
   //mypage 정보 출력
   static async mypage(req, res) {
     const userid = req.session.userid;
-    
     if(userid){
-
     const {name:username, psword:psword, affil:affil, age:age} = await UserStorage.getUsersInfo(userid);
-    console.log(username);
-    console.log(username);
-    
     res.render("home/mypage",{islogined:true, userid , username, psword, affil, age});
-    
     }
     else{
       res.render("home/mypage",{islogined:false});

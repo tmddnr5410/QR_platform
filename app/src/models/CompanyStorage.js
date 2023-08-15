@@ -14,6 +14,17 @@ class CompanyStorage{
     });
     }
 
+    //관리자 페이지, 회사 참여 목록 확인
+    static async getCompanyId(){
+        return new Promise((resolve,reject)=>{
+            const query = 'SELECT cpnid from company;';
+            
+            db.query(query,[],(err,data)=>{
+                if(err) throw reject(`${err}`);
+                resolve(data);
+            });
+        })
+    }
 
     static async save(cpnInfo){
         return new Promise((resolve,reject)=>{

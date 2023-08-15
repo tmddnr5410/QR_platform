@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/home/show.css" />
+<div class="menu-btn">
+  <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<div class="container">
+    <!-- Nav -->
+    <nav class="main-nav">
+      <li><a href="/main">QRXpo</a></li>
+      <ul class="main-menu">
+        <li><a href="/Audience">고객</a></li>
+        <li><a href="/Company">기업</a></li>
+        <li><a href="/Admin">관리자</a></li>
+      </ul>
+    </nav>
+  
+  <div class="side-nav">
+    <ul>
+      <li><a class="home" href="#">기업</a></li>
+      <li><a href="#">기업 정보 수정</a></li>
+      <li><a href="#">QR코드 확인</a></li>
+    </ul>
+  </div>
+
+  <!-- Xbox -->
+  <section class="xbox">
+    <div class="content">
+      <h2>내 정보</h2>
+      <% if(islogined){ %>
+      <div>
+        <h2>회사 이름 : <%= cpnid %></h2>
+        <h2>회사 정보 : <%= intro %></h2>
+      </div>
+      <% } else{ %>
+        <h3>company session 정보 필요</h3>
+      <% } %>
+    </div>
+  </section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <ul>
+      <li><a href="#">이용 약관</a></li>
+      <li><a href="#">개인정보처리방침</a></li>
+    </ul>
+  </div>
+  <div class="footer-inner">
+    <ul>
+      <li><a href="#">고객센터 00-0000-0000</a></li>
+      <li><a href="#">주소 00-0000-0000</a></li>
+      <li><a href="#">팩스 00-0000-0000</a></li>
+
+      <li><a href="#">&copy; AisLAB</a></li>
+    </ul>
+  </div>
+</footer>

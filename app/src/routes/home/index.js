@@ -30,10 +30,16 @@ router.get("/mypage",HomeCtrl.mypage);
 router.get("/Admin",HomeCtrl.Admin);
 //관리자 페이지화면 라우팅
 
+router.get("/Admin_parti",CompanyCtrl.Admin_parti);
+//관리자 페이지화면 라우팅
+
 router.get("/Audience",HomeCtrl.Audience);
 //사용자 페이지화면 라우팅
 
 router.get("/Company",HomeCtrl.Company);
+//사용자 페이지화면 라우팅
+
+router.get("/Company_page",CompanyCtrl.Company_page);
 //사용자 페이지화면 라우팅
 
 router.get("/Admin_log",AdminCtrl.showHistory);
