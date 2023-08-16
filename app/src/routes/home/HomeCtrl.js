@@ -1,5 +1,5 @@
 const UserStorage = require("../../models/UserStorage");
-
+const CompanyStorage = require("../../models/CompanyStorage");
 
 class HomeCtrl {
   static home(req, res) {
@@ -53,6 +53,19 @@ class HomeCtrl {
     }
     else{
       res.render("home/mypage",{islogined:false});
+    }
+  }
+
+  static async Company_page(req, res) {
+    const Companyid = req.session.Companyid;
+    
+    if(Companyid){
+    const {cpnid:cpnid, name:name, intro:intro} = await CompanyStorage.getCompanyInfo(Companyid);
+      
+    res.render("home/Company_page",{islogined:true, cpnid ,name, intro});
+    }
+    else{
+      res.render("home/Company_page",{islogined:false});
     }
   }
 

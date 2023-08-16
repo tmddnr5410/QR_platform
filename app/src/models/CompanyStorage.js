@@ -3,7 +3,6 @@
 const db= require('../config/db');
 
 class CompanyStorage{
-
     static getCompanyInfo(cid){
         return new Promise((resolve,reject)=>{
         const query ="select * FROM Company where cpnid = ?;";

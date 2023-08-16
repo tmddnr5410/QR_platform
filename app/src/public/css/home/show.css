@@ -267,6 +267,12 @@ ul {
   height: 40px;
 }
 
+.changecpninfo input{
+  width: 500px;
+  height: 40px;
+}
+
+
 /* Footer */
 .footer {
   clear:both;

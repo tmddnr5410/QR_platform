@@ -45,7 +45,7 @@ router.get("/Audience",HomeCtrl.Audience);
 router.get("/Company",HomeCtrl.Company);
 //사용자 페이지화면 라우팅
 
-router.get("/Company_page",CompanyCtrl.Company_page);
+router.get("/Company_page",HomeCtrl.Company_page);
 //사용자 페이지화면 라우팅
 
 router.get("/Admin_log",AdminCtrl.showHistory);

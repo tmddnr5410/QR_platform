@@ -25,14 +25,19 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>내 정보</h2>
+      <h2>회사 정보</h2>
       <% if(islogined){ %>
-      <div>
-        <h2>회사 이름 : <%= cpnid %></h2>
+  
+      <div class="changecpninfo">
+        <br>
+        <h2>회사 이름 : <%= name %></h2>
+        <br>
         <h2>회사 정보 : <%= intro %></h2>
+        <br>
+        <a class="btn">수정</a>
       </div>
       <% } else{ %>
-        <h3>company session 정보 필요</h3>
+        <h3>company login 필요</h3>
       <% } %>
     </div>
   </section>
