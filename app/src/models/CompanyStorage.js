@@ -9,7 +9,7 @@ class CompanyStorage{
         const query ="select * FROM Company where cpnid = ?;";
         db.query(query,[cid],(err,data)=>{
             if(err) throw reject(`${err}`);
-            resolve(data);
+            resolve(data[0]);
         });
     });
     }
