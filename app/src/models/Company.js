@@ -11,8 +11,9 @@ class Company{
     async login(){
         const client = this.body;
         try{
+            console.log(client);
             const {cpnid,psword} = await CompanyStorage.getCompanyInfo(client.cpnid);
-                if(cpnid == client.cpnid && psword === client.psword){
+                if(cpnid === client.cpnid && psword === client.psword){
                     return {success:true};
                 }
                 else{
