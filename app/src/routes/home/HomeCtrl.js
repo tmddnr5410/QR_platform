@@ -56,6 +56,17 @@ class HomeCtrl {
     }
   }
 
+  static async Audience(req, res) {
+    const userid = req.session.userid;
+    if(userid){
+    const {name:username, psword:psword, affil:affil, age:age} = await UserStorage.getUsersInfo(userid);
+    res.render("home/Audience",{islogined:true, userid , username, psword, affil, age});
+    }
+    else{
+      res.render("home/Audience",{islogined:false});
+    }
+  }
+
   static async Company_page(req, res) {
     const Companyid = req.session.Companyid;
     
@@ -69,17 +80,24 @@ class HomeCtrl {
     }
   }
 
+  static async Company(req, res) {
+    const Companyid = req.session.Companyid;
+    
+    if(Companyid){
+    const {cpnid:cpnid, name:name, intro:intro} = await CompanyStorage.getCompanyInfo(Companyid);
+      
+    res.render("home/Company",{islogined:true, cpnid ,name, intro});
+    }
+    else{
+      res.render("home/Company",{islogined:false});
+    }
+  }
+
   static Admin(req, res) {
     res.render("home/Admin");
   }
 
-  static Audience(req, res) {
-    res.render("home/Audience");
-  }
-
-  static Company(req, res) {
-    res.render("home/Company");
-  }
+  
 
   static Admin_log(req, res) {
     res.render("home/Admin_log");

@@ -272,6 +272,10 @@ ul {
   height: 40px;
 }
 
+.changecpninfo textarea{
+  width:500px;
+  height: 60px;
+}
 
 /* Footer */
 .footer {

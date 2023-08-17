@@ -16,8 +16,8 @@
   
   <div class="side-nav">
     <ul>
-      <li><a class="home" href="#">기업</a></li>
-      <li><a href="#">기업 정보 수정</a></li>
+      <li><a class="home" href="/Company">기업 정보</a></li>
+      <li><a href="/Company_page">기업 정보 수정</a></li>
       <li><a href="#">QR코드 확인</a></li>
     </ul>
   </div>
@@ -30,9 +30,9 @@
   
       <div class="changecpninfo">
         <br>
-        <h2>회사 이름 : <%= name %></h2>
+        <h4>회사 이름 : <%= name %></h4>
         <br>
-        <h2>회사 정보 : <%= intro %></h2>
+        <p><textarea placeholder= "<%= intro %>"></textarea></p>
         <br>
         <a class="btn">수정</a>
       </div>

@@ -16,7 +16,7 @@
 
 <div class="side-nav">
   <ul>
-    <li><a class="home" href="#">기업</a></li>
+    <li><a class="home" href="/Company">기업 정보</a></li>
     <li><a href="/Company_page">기업 정보 수정</a></li>
     <li><a href="#">QR코드 확인</a></li>
   </ul>
@@ -24,7 +24,19 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>기업 페이지</h2>
+      <h2>회사 정보</h2>
+      <% if(islogined){ %>
+  
+      <div class="changecpninfo">
+        <br>
+        <h2>회사 이름 : <%= name %></h2>
+        <br>
+        <h2>회사 정보 : <%= intro %></h2>
+        <br>
+      </div>
+      <% } else{ %>
+        <h3>company login 필요</h3>
+      <% } %>
     </div>
   </section>
 </div>
