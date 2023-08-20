@@ -38,10 +38,10 @@ class CompanyStorage{
     static async edit(cpnInfo){
         return new Promise((resolve,reject)=>{
             const query = `UPDATE Company
-            SET cpnid = ?, psword = ?, name = ?, intro = ?
-            where id = ?`;
+            SET  name = ?, intro = ?
+            where id = 1`;
             
-            db.query(query,[cpnInfo.cpnid,cpnInfo.psword,cpnInfo.name,cpnInfo.intro,cpnInfo.id],(err)=>{
+            db.query(query,[cpnInfo.cpnname,cpnInfo.intro],(err)=>{
                 if(err) throw reject(`${err}`);
                 resolve({success:true});
             })
