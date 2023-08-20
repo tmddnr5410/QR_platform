@@ -37,11 +37,11 @@ class Company{
 
     }
     
-    async edit(){
+    async edit(cpnID){
         const client = this.body;
 
         try{
-            const response = await CompanyStorage.edit(client);
+            const response = await CompanyStorage.edit(client,cpnID);
             return response;
         } catch(err){
             const er = {success:false, msg:err};

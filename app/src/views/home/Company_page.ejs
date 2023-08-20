@@ -1,8 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+
+  <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
 <link rel="stylesheet" href="/css/home/show.css" />
+<script>
+  // cpnid 값을 JavaScript 변수로 저장
+  const cpnid = "<%= cpnid %>";
+</script>
+<script src = "/js/home/company_page.js" defer></script>
+
+</head>
 <div class="menu-btn">
   <i class="fas fa-bars fa-2x"></i>
 </div>
-
 <div class="container">
     <!-- Nav -->
     <nav class="main-nav">
@@ -30,12 +43,15 @@
   
       <div class="changecpninfo">
         <br>
-        <h4>회사 이름 : <%= name %></h4>
+        <p>회사 이름: <input id = "name" type="text" placeholder="<%= name %>" /></p>
+
         <br>
-        <p><textarea placeholder= "<%= intro %>"></textarea></p>
+        <p><textarea id = "intro" placeholder= "<%= intro %>" ></textarea></p>
         <br>
-        <a class="btn">수정</a>
+        
       </div>
+      
+        <a id="editbtn">수정</a>
       <% } else{ %>
         <h3>company login 필요</h3>
       <% } %>
