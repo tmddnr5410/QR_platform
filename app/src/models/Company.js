@@ -25,7 +25,7 @@ class Company{
     }
     async register(){
         const client = this.body;
-
+        console.log(client);
         try{
             const response = await CompanyStorage.save(client);
             return response;

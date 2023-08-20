@@ -27,8 +27,8 @@ class CompanyStorage{
 
     static async save(cpnInfo){
         return new Promise((resolve,reject)=>{
-            const query = 'insert INTO Company(cpnid,name,psword,intro) values(?,?,?,?);';
-            db.query(query,[cpnInfo.cpnid,cpnInfo.name,cpnInfo.psword,cpnInfo.intro],(err)=>{
+            const query = 'insert INTO Company(cpnid,name,psword,intro) values(?,?,?," ");';
+            db.query(query,[cpnInfo.cpnid,cpnInfo.cpnname,cpnInfo.psword],(err)=>{
                 if(err) throw reject(`${err}`);
                 resolve({success:true});
             });
