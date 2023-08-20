@@ -57,8 +57,9 @@ class CompanyCtrl {
   }
 
   static async processEdit(req,res){
+    const cpnID = req.params.cpnID;
     const company = new Company(req.body);
-    const response = await company.edit();
+    const response = await company.edit(cpnID);
 
     return res.json(response);
   }

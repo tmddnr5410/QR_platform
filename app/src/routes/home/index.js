@@ -86,6 +86,6 @@ router.post("/cpnlogin",CompanyCtrl.processLogin);
 router.post("/cpnregister",CompanyCtrl.processRegister);
 
 //register경로로 포스트요청이 오면 실행
-router.post("/cpnedit",CompanyCtrl.processEdit);
+router.post("/cpnedit/:cpnID",CompanyCtrl.processEdit);
 
 module.exports = router;

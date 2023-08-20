@@ -12,7 +12,7 @@ const intro = document.querySelector("#intro"),
             cpnname: cpnname.value,
         };
 
-        fetch(`/cpnedit`,{
+        fetch(`/cpnedit/${cpnid}`,{
             //post방식
             method: "POST",
             headers:{
@@ -20,9 +20,8 @@ const intro = document.querySelector("#intro"),
             },
             body: JSON.stringify(req),
 
-        }).then((res)=>res.json)
+        }).then((res)=>res.json())
         .then((res)=>{
-            console.log(res);
             if (res.success) {
                 location.href = "/company";
                 }

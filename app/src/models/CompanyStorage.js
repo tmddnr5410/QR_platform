@@ -22,7 +22,7 @@ class CompanyStorage{
                 if(err) throw reject(`${err}`);
                 resolve(data);
             });
-        })
+        });
     }
 
     static async save(cpnInfo){
@@ -32,21 +32,23 @@ class CompanyStorage{
                 if(err) throw reject(`${err}`);
                 resolve({success:true});
             });
-        })
+        });
     }
 
-    static async edit(cpnInfo){
+    static async edit(cpnInfo,cpnID){
         return new Promise((resolve,reject)=>{
+            console.log(`${typeof cpnInfo.cpnname} , ${typeof cpnInfo.intro},${typeof cpnID},cpnid = ${cpnID}`)
             const query = `UPDATE Company
-            SET  name = ?, intro = ?
-            where id = 1`;
+            SET name = ?, intro = ?
+            where cpnid = ?;`;
             
-            db.query(query,[cpnInfo.cpnname,cpnInfo.intro],(err)=>{
+            db.query(query,[cpnInfo.cpnname,cpnInfo.intro,cpnID],(err)=>{
                 if(err) throw reject(`${err}`);
                 resolve({success:true});
-            })
+            });
 
-        })
+
+        });
     }
 
 }
