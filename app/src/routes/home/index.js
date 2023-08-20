@@ -57,7 +57,9 @@ router.get("/logout", HomeCtrl.logout);
 
 router.get("/qr",QRCtrl.showQRmaker);
 
-router.post("/madeqr",QRCtrl.madeQR);
+
+//qr만드는 화면
+router.post("/madeqr/:cpnID",QRCtrl.madeQR);
 
 
 
