@@ -1,4 +1,6 @@
   <link rel="stylesheet" href="/css/home/main.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/css/home/slide.js"></script>
   <div class="menu-btn">
     <i class="fas fa-bars fa-2x"></i>
   </div>
@@ -6,7 +8,7 @@
   <div class="container">
     <!-- Nav -->
     <nav class="main-nav">
-      <li><a href="/main">QRXpo</a></li>
+      <a href="/main"><img src="css/img/logo.png" width="100" height="60"></a>
       <ul class="main-menu">
         <li><a href="/Audience">고객</a></li>
         <li><a href="/Company">기업</a></li>
@@ -37,13 +39,43 @@
 
     <!-- Showcase -->
     <header class="showcase">
-      <h2>QR 기업 정보</h2>
-  
       <a href="/show" class="btn">
-        보러 가기 <i class="fas fa-chevron-right"></i>
+        QR 정보보러 가기 <i class="fas fa-chevron-right"></i>
       </a>
     </header>
+
+    <div class="slider">
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+      <input type="radio" name="slide" id="slide4">
+      <ul id="imgholder" class="imgs">
+          <li><img src="css/img/C.jpg"></li>
+          <li><img src="css/img/A.jpg"></li>
+          <li><img src="css/img/C.jpg"></li>
+          <li><img src="css/img/A.jpg"></li>
+      </ul>
+      <div class="bullets">
+          <label for="slide1">&nbsp;</label>
+          <label for="slide2">&nbsp;</label>
+          <label for="slide3">&nbsp;</label>
+          <label for="slide4">&nbsp;</label>
+      </div>
+    </div>
+
+    <div id="index_01">
+      <div id="autoslide">
+          <ul>
+              <li><a href="#"><img src="css/img/A.jpg" alt="슬라이드1"></a></li>
+              <li><a href="#"><img src="css/img/C.jpg" alt="슬라이드2"></a></li>
+              <li><a href="#"><img src="css/img/A.jpg" alt="슬라이드3"></a></li>
+          </ul>
+      </div>
+    </div>
   </div>
+
+  
+
 
   <!--기업 정보 카드 칸-->  
   <div class = "whole-cards">
@@ -54,153 +86,69 @@
     <!-- Home cards 1 -->
     <section class="home-cards">
       <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
-        <section >
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
+        <div class="cpnname1">
+        </div>
+        <div class="cpnintro">
+        </div>
       </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
+
+        <div class="home-cards-box">
+          <div class="cpnname2">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
+
+        <div class="home-cards-box">
+          <div class="cpnname3">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
+
+        <div class="home-cards-box">
+          <div class="cpnname4">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
+
     </section>
 
     <!-- Home cards 2 -->
     <section class="home-cards">
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
-        <section >
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-    </section>
+        <div class="home-cards-box">
+          <div class="cpnname2">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
 
-    <!-- Home cards 3 -->
-    <section class="home-cards">
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/LZPVKq9/card1.png" alt=""> -->
-        <section >
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
-      <div class="home-cards-box">
-        <!-- <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" /> -->
-        <h3>회사명</h3>
-        <p>
-          회사 정보
-        </p>
-        <a href="#"> More <i class="fas fa-chevron-right"></i></a>
-      </div>
+        <div class="home-cards-box">
+          <div class="cpnname4">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
+
+
+        <div class="home-cards-box">
+          <div class="cpnname1">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
+
+        <div class="home-cards-box">
+          <div class="cpnname3">
+          </div>
+          <div class="cpnintro">
+          </div>
+        </div>
     </section>
     </div>
 
-    <!-- Follow -->
     <div class="container">
-    <section class="follow">
-      <p>Follow</p>
-      <a href="https://facebook.com">
-        <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook">
-      </a>
-      <a href="https://twitter.com">
-        <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter">
-      </a>
-      <!-- <a href="https://youtube.com">
-        <img src="../../public/css/img/youtube-icon.png" alt="Youtube">
-      </a> -->
-    </section>
     <!-- Xbox -->
     <section class="xbox">
       <div class="content">
@@ -222,6 +170,8 @@
       </div>
     </section>
   </div>
+
+  
       <!-- Footer -->
       <footer class="footer">
         <div class="footer-inner">
