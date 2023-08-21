@@ -1,4 +1,6 @@
   <link rel="stylesheet" href="/css/home/main.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/css/home/slide.js"></script>
   <div class="menu-btn">
     <i class="fas fa-bars fa-2x"></i>
   </div>
@@ -37,32 +39,42 @@
 
     <!-- Showcase -->
     <header class="showcase">
-      
-      
       <a href="/show" class="btn">
         QR 정보보러 가기 <i class="fas fa-chevron-right"></i>
       </a>
     </header>
-  </div>
 
-  <div class="slider">
-    <input type="radio" name="slide" id="slide1" checked>
-    <input type="radio" name="slide" id="slide2">
-    <input type="radio" name="slide" id="slide3">
-    <input type="radio" name="slide" id="slide4">
-    <ul id="imgholder" class="imgs">
-        <li><img src="css/img/C.jpg"></li>
-        <li><img src="css/img/A.jpg"></li>
-        <li><img src="css/img/C.jpg"></li>
-        <li><img src="css/img/A.jpg"></li>
-    </ul>
-    <div class="bullets">
-        <label for="slide1">&nbsp;</label>
-        <label for="slide2">&nbsp;</label>
-        <label for="slide3">&nbsp;</label>
-        <label for="slide4">&nbsp;</label>
+    <div class="slider">
+      <input type="radio" name="slide" id="slide1" checked>
+      <input type="radio" name="slide" id="slide2">
+      <input type="radio" name="slide" id="slide3">
+      <input type="radio" name="slide" id="slide4">
+      <ul id="imgholder" class="imgs">
+          <li><img src="css/img/C.jpg"></li>
+          <li><img src="css/img/A.jpg"></li>
+          <li><img src="css/img/C.jpg"></li>
+          <li><img src="css/img/A.jpg"></li>
+      </ul>
+      <div class="bullets">
+          <label for="slide1">&nbsp;</label>
+          <label for="slide2">&nbsp;</label>
+          <label for="slide3">&nbsp;</label>
+          <label for="slide4">&nbsp;</label>
+      </div>
+    </div>
+
+    <div id="index_01">
+      <div id="autoslide">
+          <ul>
+              <li><a href="#"><img src="css/img/A.jpg" alt="슬라이드1"></a></li>
+              <li><a href="#"><img src="css/img/C.jpg" alt="슬라이드2"></a></li>
+              <li><a href="#"><img src="css/img/A.jpg" alt="슬라이드3"></a></li>
+          </ul>
+      </div>
     </div>
   </div>
+
+  
 
 
   <!--기업 정보 카드 칸-->  
