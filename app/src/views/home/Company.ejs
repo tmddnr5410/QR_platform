@@ -18,9 +18,7 @@
   <ul>
     <li><a class="home" href="/Company">기업 정보</a></li>
     <li><a href="/Company_page">기업 정보 수정</a></li>
-
-   
-    <li><form method="post", action="/madeqr/<%= cpnid %>"> <input type="submit" value="qr코드 생성" id="btn">QR코드 확인</form></li>
+    <!-- <li><form method="post", action="/madeqr/<%= cpnid %>"> <input type="submit" value="qr코드 생성" id="btn">QR코드 확인</form></li> -->
   </ul>
 </div>
   <!-- Xbox -->
@@ -38,6 +36,7 @@
         <br>
         <h2>회사 아이디 : <%= cpnid %></h2>
         <br>
+        <form method="post", action="/madeqr/<%= cpnid %>"> <input type="submit" value="qr코드 확인" id="btn"></form>
       </div>
       <% } else{ %>
         <h3>company login 필요</h3>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/home/show.css" />
+<link rel="stylesheet" href="/css/home/audience.css" />
 <div class="menu-btn">
   <i class="fas fa-bars fa-2x"></i>
 </div>
@@ -16,7 +16,7 @@
 
   <div class="side-nav">
     <ul>
-      <li><a class="home" href="/Audience">고객 정보</a></li>
+      <li><a class="home" href="/Audience">내 정보</a></li>
       <li><a href="/mypage">내 정보 수정</a></li>
   
     </ul>
@@ -24,29 +24,37 @@
 
   <!-- Xbox -->
   <section class="xbox">
-    <div class="content">
-      <h2>내 정보</h2>
       <div>
       <% if(islogined){ %>
-        <div class="changeinfo">
-          <input id = "id" type="text" placeholder=<%= username %> />
-          <br>
-          <input id = "name" type="text" placeholder=<%= userid %> />
-          <br>
-          <input id = "psword" type="password" placeholder=<%= psword %> /> 
-          <br>
-          <input id = "affil" type="text" placeholder=<%= affil %> /> 
-          <br>
-          <input id = "age" type="text" placeholder=<%= age %> /> 
-          <br>
-          <a class="btn">수정</a>
-        </div>
-          
+        <form>
+          <fieldset id="fieldset-sign-up">
+            <legend>내 정보 수정</legend>
+            <label>
+              아이디
+              <input id = "id" type="text" placeholder=<%= username %> />
+            </label>
+            <label>
+              이름
+              <input id = "name" type="text" placeholder=<%= userid %> />
+            </label>
+            <label>
+              비밀번호
+              <input id = "psword" type="password" placeholder=<%= psword %> /> 
+            </label>
+            <label>
+              소속
+              <input id = "affil" type="text" placeholder=<%= affil %> /> 
+            </label>
+            <label>
+              나이
+              <input id = "age" type="text" placeholder=<%= age %> /> 
+            </label>
+            <a class="btn">수정</a>
+          </fieldset>
         <% } else{ %>
               <h3>login 필요</h3>
         <% } %>
       </div>
-    </div>
   </section>
 </div>
 

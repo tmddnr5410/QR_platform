@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/home/show.css" />
+<link rel="stylesheet" href="/css/home/audience.css" />
 <div class="menu-btn">
   <i class="fas fa-bars fa-2x"></i>
 </div>
@@ -16,34 +16,37 @@
 
 <div class="side-nav">
   <ul>
-    <li><a class="home" href="/Audience">고객 정보</a></li>
+    <li><a class="home" href="/Audience">내 정보</a></li>
     <li><a href="/mypage">내 정보 수정</a></li>
 
   </ul>
 </div>
   <!-- Xbox -->
   <section class="xbox">
-    <div class="content">
-      <h2>고객 페이지</h2>
       <div>
         <% if(islogined){ %>
-          <div class="changeinfo">
-            <br>
-            <h3>이름 : <%= username %></h3>
-            <br>
-            <h3>아이디 : <%= userid %></h3>
-            <br>
-            <h3>비밀번호 : <%= psword %></h3>
-            <br>
-            <h3>소속 : <%= affil %></h3>
-            <br>
-            <h3>나이 : <%= age %></h3>
-            <br>
-          </div>
+            <form>
+              <fieldset id="fieldset-sign-up">
+                <legend>내 정보</legend>
+                <label>
+                  이름 : <%= username %>
+                </label>
+                <label>
+                  아이디 : <%= userid %>
+                </label>
+                <label>
+                  비밀번호 : <%= psword %>
+                </label>
+                <label>
+                  소속 : <%= affil %>
+                </label>
+                <label>
+                  나이 : <%= age %>
+                </label>
+              </fieldset>
           <% } else{ %>
                 <h3>login 필요</h3>
           <% } %>
-        </div>
     </div>
   </section>
 </div>

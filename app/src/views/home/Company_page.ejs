@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-
   <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
 <link rel="stylesheet" href="/css/home/show.css" />
 <script>
   // cpnid 값을 JavaScript 변수로 저장
@@ -26,12 +24,11 @@
         <li><a href="/Admin">관리자</a></li>
       </ul>
     </nav>
-  
   <div class="side-nav">
     <ul>
       <li><a class="home" href="/Company">기업 정보</a></li>
       <li><a href="/Company_page">기업 정보 수정</a></li>
-      <li><a href="#">QR코드 확인</a></li>
+      <!-- <li><a href="#">QR코드 확인</a></li> -->
     </ul>
   </div>
 
@@ -46,11 +43,9 @@
         <p>회사 이름: <input id = "name" type="text" placeholder="<%= name %>" /></p>
 
         <br>
-        <p><textarea id = "intro" placeholder= "<%= intro %>" ></textarea></p>
+        <p>회사 정보: <textarea id = "intro" placeholder= "<%= intro %>" ></textarea></p>
         <br>
-        
       </div>
-      
         <a id="editbtn">수정</a>
       <% } else{ %>
         <h3>company login 필요</h3>
