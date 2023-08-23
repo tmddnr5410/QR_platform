@@ -249,22 +249,6 @@ ul {
   border: 1px solid #444444;
 }
 
-/*change info*/
-.changeinfo input{
-  width: 250px;
-  height: 40px;
-}
-
-.changecpninfo input{
-  width: 500px;
-  height: 40px;
-}
-
-.changecpninfo textarea{
-  width:500px;
-  height: 60px;
-}
-
 /* Footer */
 .footer {
   clear:both;
@@ -395,7 +379,7 @@ table#logtable thead th, table#logtable tbody td {
   padding: .8rem; font-size: 1.4rem;
 }
 table#logtable tbody td { 
-  padding: .8rem; font-size: 1.4rem;
+  padding: .8rem; font-size: 1.0rem;
   color: #444; background: #eee; 
 }
 table#logtable tbody tr:not(:last-child) { 

@@ -97,8 +97,6 @@ class HomeCtrl {
     res.render("home/Admin");
   }
 
-  
-
   static Admin_log(req, res) {
     res.render("home/Admin_log");
   }

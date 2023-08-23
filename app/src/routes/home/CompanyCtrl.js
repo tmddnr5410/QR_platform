@@ -29,9 +29,9 @@ class CompanyCtrl {
 
   
   static async Admin_parti(req, res) {
-    const data = await CompanyStorage.getCompanyId();
+    const data = await CompanyStorage.getCompanyName();
     console.log(data);
-    res.render("home/Admin_parti",{ cpnID:data});
+    res.render("home/Admin_parti",{ name:data});
   }
 
   static async processLogin(req, res) {

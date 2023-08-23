@@ -26,16 +26,19 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>참여 기업 확인</h2>
-        <div>
-        </tr>
-            <% for (var i = 0; i < cpnID.length; i++) { %>
-        <tr>
-        <td>참여 기업 : <%= cpnID[i].cpnid %></td>
-        <br>
-            <% } %>
+        <div class="log_table">
+          <table id="logtable">
+          <thead>
+            <th>참여 기업</th>
+          <tbody>
+          <% for (var i = 0; i < name.length; i++) { %>
+          <tr>
+          <td><%=name[i].name %></td>
+          <% } %>
+          </tr>
+          </table>
         </div>
-    
+
     </div>
   </section>
 </div>

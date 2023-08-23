@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/css/home/show.css" />
+<link rel="stylesheet" href="/css/home/audience.css" />
 <script>
   // cpnid 값을 JavaScript 변수로 저장
   const cpnid = "<%= cpnid %>";
@@ -35,18 +35,22 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>회사 정보</h2>
-      <% if(islogined){ %>
-  
-      <div class="changecpninfo">
-        <br>
-        <p>회사 이름: <input id = "name" type="text" placeholder="<%= name %>" /></p>
 
-        <br>
-        <p>회사 정보: <textarea id = "intro" placeholder= "<%= intro %>" ></textarea></p>
-        <br>
-      </div>
-        <a id="editbtn">수정</a>
+      <% if(islogined){ %>
+        <form>
+          <fieldset id="fieldset-sign-up">
+            <legend>회사 정보 수정</legend>
+            <label>
+              회사 이름
+              <input id = "name" type="text" placeholder=<%= name %> />
+            </label>
+            <label width="100px">
+              회사 정보
+              <input id = "intro" type="text" placeholder=<%= intro %> />
+            </label>
+            
+            <a class="btn" id="editbtn">수정</a>
+          </fieldset>
       <% } else{ %>
         <h3>company login 필요</h3>
       <% } %>

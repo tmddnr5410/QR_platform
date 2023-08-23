@@ -350,7 +350,7 @@ body {
 }
 
 form {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 32px 0;
 }
@@ -373,7 +373,7 @@ label {
   font-weight: 500;
   color: #555;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+ 
   align-items: center;
   
   &:not(:last-child) {
@@ -387,6 +387,11 @@ label {
       margin-top: 8px;
     }
   }
+}
+
+textarea{
+  width:500px;
+  height: 60px;
 }
 
 input, select {

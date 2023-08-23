@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/home/show.css" />
+<link rel="stylesheet" href="/css/home/audience.css" />
 <div class="menu-btn">
   <i class="fas fa-bars fa-2x"></i>
 </div>
@@ -24,20 +24,22 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>회사 정보</h2>
+
       <% if(islogined){ %>
-  
-      <div class="changecpninfo">
-        <br>
-        <h2>회사 이름 : <%= name %></h2>
-        <br>
-        <h2>회사 정보 : <%= intro %></h2>
-        <br>
-        <br>
-        <h2>회사 아이디 : <%= cpnid %></h2>
-        <br>
-        <form method="post", action="/madeqr/<%= cpnid %>"> <input type="submit" value="qr코드 확인" id="btn"></form>
-      </div>
+        <form method="post", action="/madeqr/<%= cpnid %>">
+          <fieldset id="fieldset-sign-up">
+            <legend>회사 정보</legend>
+            <label>
+              회사 이름 : <%= name %>
+            </label>
+            <label>
+              회사 정보 : <%= intro %>
+            </label>
+            <label>
+              회사 아이디 : <%= cpnid %>
+            </label>
+            <input type="submit" value="qr코드 확인" id="btn">
+          </fieldset>
       <% } else{ %>
         <h3>company login 필요</h3>
       <% } %>

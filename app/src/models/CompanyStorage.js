@@ -25,6 +25,17 @@ class CompanyStorage{
         });
     }
 
+    static async getCompanyName(){
+        return new Promise((resolve,reject)=>{
+            const query = 'SELECT name from company;';
+            
+            db.query(query,[],(err,data)=>{
+                if(err) throw reject(`${err}`);
+                resolve(data);
+            });
+        });
+    }
+
     static async save(cpnInfo){
         return new Promise((resolve,reject)=>{
             const query = 'insert INTO Company(cpnid,name,psword,intro) values(?,?,?," ");';

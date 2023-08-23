@@ -26,19 +26,17 @@
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <div class = "subtitle">
-        <h2>로그 출력</h2>
-      </div>
       <div class="log_table">
       <table id="logtable">
       <thead>
+        <th>로그 확인</th>
         <th>접속자</th>
         <th>회사</th>
         <th>접속 시간</th>  
       <tbody>
       <% for (var i = 0; i < arr_history.length; i++) { %>
       <tr>
-      <td><%= arr_history[i].uid %></td>  <td><%=arr_history[i].cpnid %></td>  <td><%=arr_history[i].in_date%></td>
+      <td><%= i+1 %></td> <td><%= arr_history[i].uid %></td>  <td><%=arr_history[i].cpnid %></td>  <td><%=arr_history[i].in_date%></td>
       <% } %>
       </tr>
       </table>
