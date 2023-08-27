@@ -2,7 +2,7 @@ const QRCode= require('qrcode');
 
 class QRCtrl {
     static showQRmaker(req, res) {
-        res.render("home/QRmaker");
+        res.render("admin/QRmaker");
     }
 
     static madeQR(req,res){

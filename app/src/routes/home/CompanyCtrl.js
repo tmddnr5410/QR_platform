@@ -31,18 +31,18 @@ class CompanyCtrl {
   static async Admin_parti(req, res) {
     const data = await CompanyStorage.getCompanyName();
     console.log(data);
-    res.render("home/Admin_parti",{ name:data});
+    res.render("admin/Admin_parti",{ name:data});
   }
 
   static async processLogin(req, res) {
-    console.log(req.body);
+    //console.log(req.body);
     const company = new Company(req.body);
     const response = await company.login();
     
 
     //로그인 성공시 세션 생성
     if (response.success) {
-      console.log("success")
+      //console.log("success")
       req.session.is_logined = true;
       req.session.Companyid = req.body.cpnid;
     }

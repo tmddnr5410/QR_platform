@@ -8,16 +8,19 @@ class HomeCtrl {
   }
 
   static async main(req, res) {
-    // console.log(userid);
+
     const userid = req.session.userid;
-    
+    const Companyid = req.session.Companyid;
+
     if(userid){
-
     const {name:username} = await UserStorage.getUsersName(userid);
-    // console.log(username);
-
+    //console.log(username);
     res.render("home/main",{userid , islogined:true, username});
-    
+    }
+    else if(Companyid){
+    const {name:cpnname} = await CompanyStorage.getCompanyName(Companyid);
+    console.log(cpnname);
+    res.render("home/main",{Companyid , islogined:true, cpnname});
     }
     else{
       res.render("home/main",{islogined:false});
@@ -49,10 +52,10 @@ class HomeCtrl {
     const userid = req.session.userid;
     if(userid){
     const {name:username, psword:psword, affil:affil, age:age} = await UserStorage.getUsersInfo(userid);
-    res.render("home/mypage",{islogined:true, userid , username, psword, affil, age});
+    res.render("user/mypage",{islogined:true, userid , username, psword, affil, age});
     }
     else{
-      res.render("home/mypage",{islogined:false});
+      res.render("user/mypage",{islogined:false});
     }
   }
 
@@ -60,10 +63,10 @@ class HomeCtrl {
     const userid = req.session.userid;
     if(userid){
     const {name:username, psword:psword, affil:affil, age:age} = await UserStorage.getUsersInfo(userid);
-    res.render("home/Audience",{islogined:true, userid , username, psword, affil, age});
+    res.render("user/Audience",{islogined:true, userid , username, psword, affil, age});
     }
     else{
-      res.render("home/Audience",{islogined:false});
+      res.render("user/Audience",{islogined:false});
     }
   }
 
@@ -73,10 +76,10 @@ class HomeCtrl {
     if(Companyid){
     const {cpnid:cpnid, name:name, intro:intro} = await CompanyStorage.getCompanyInfo(Companyid);
       
-    res.render("home/Company_page",{islogined:true, cpnid ,name, intro});
+    res.render("company/Company_page",{islogined:true, cpnid ,name, intro});
     }
     else{
-      res.render("home/Company_page",{islogined:false});
+      res.render("company/Company_page",{islogined:false});
     }
   }
 
@@ -86,19 +89,19 @@ class HomeCtrl {
     if(Companyid){
     const {cpnid:cpnid, name:name, intro:intro} = await CompanyStorage.getCompanyInfo(Companyid);
       
-    res.render("home/Company",{islogined:true, cpnid ,name, intro});
+    res.render("company/Company",{islogined:true, cpnid ,name, intro});
     }
     else{
-      res.render("home/Company",{islogined:false});
+      res.render("company/Company",{islogined:false});
     }
   }
 
   static Admin(req, res) {
-    res.render("home/Admin");
+    res.render("admin/Admin");
   }
 
   static Admin_log(req, res) {
-    res.render("home/Admin_log");
+    res.render("admin/Admin_log");
   }
 
   static logout(req, res){
