@@ -58,6 +58,7 @@
   
   .main-nav ul li a {
     padding-bottom: 2px;
+    /* font-weight: bold; */
   }
   
   .main-nav ul li a:hover {
@@ -103,34 +104,36 @@
     color: #333;
   }
   
-  /*side-nav*/
-  .side-nav ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-    width: 150px;
-    background: rgb(236, 234, 234);
-    height: 50%;
-    float:left;
-  }
-  
-  .side-nav li a {
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    color: #000;
-    font-weight: bold;
-  }
-  
-  .side-nav li a:hover {
-    background: #333;
-    color: #fff;
-  }
-  
-  .side-nav li a.home {
-    background : #333;
-    color: #fff;
-  }
+/*side-nav*/
+.side-nav ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background: rgb(236, 234, 234);
+  height: 50%;
+  float:left;
+  border-radius: 15px;
+}
+
+.side-nav li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: #000;
+  font-weight: bold;
+}
+
+.side-nav li a:hover {
+  background: #333;
+  color: #fff;
+}
+
+.side-nav li a.home {
+  background : #333;
+  color: #fff;
+  border-radius: 15px 15px 0px 0px;
+}
   
   /* Xbox */
   .xbox {

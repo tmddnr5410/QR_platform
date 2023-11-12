@@ -6,7 +6,7 @@
 <div class="container">
   <!-- Nav -->
   <nav class="main-nav">
-    <li><a href="/main">QRXpo</a></li>
+    <a href="/main"><img src="css/img/logo.png" width="100" height="60"></a>
     <ul class="main-menu">
         <li><a href="/Audience">고객</a></li>
         <li><a href="/Company">기업</a></li>
@@ -23,14 +23,15 @@
     <li><a href="/qr">QR코드 생성</a></li>
   </ul>
 </div>
+
   <!-- Xbox -->
   <section class="xbox">
     <div class="content">
-      <h2>QR코드 생성</h2>
 	  <form method="post", action="/madeqr">
-		<input type="text" id="text" name="text">
-		<input type="submit" value="qr코드 생성" id="btn">
-	</form>
+    <h2>QR 생성</h2>
+		<input type="text" id="texts" name="text">
+    <button class="w-btn w-btn-indigo" type="submit">QR 생성</button>
+	  </form>
     </div>
   </section>
 </div>
